@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limestone Company — Concrete Additive Product Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green:     #1a5232;
+      --green-d:   #0e3a20;
+      --green-l:   #4a8d5f;
+      --green-xl:  #7ab896;
+      --green-soft:#e8f0ea;
+      --text:      #1f2937;
+      --text-soft: #6b7280;
+      --bg-paper:  #ffffff;
+      --border:    #d4dbd1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #e6e8e2; font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.5; }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: var(--bg-paper);
+      margin: 20px auto;
+      padding: 18mm 18mm 22mm;
+      position: relative;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    /* Decorative curves like original */
+    .curve-tl {
+      position: absolute; top: -120px; left: -200px;
+      width: 500px; height: 500px;
+      border-right: 2px solid var(--green-l);
+      border-radius: 50%;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    .curve-br {
+      position: absolute; bottom: -180px; right: -180px;
+      width: 600px; height: 600px;
+      border-left: 2px solid var(--green-l);
+      border-radius: 50%;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    /* Page header */
+    .page-header {
+      display: flex; justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--green-soft);
+      margin-bottom: 1.5rem;
+      position: relative; z-index: 2;
+    }
+    .header-logo {
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .header-logo img {
+      height: 38px; width: 38px;
+      border-radius: 50%; object-fit: cover;
+      background: #ffffff;
+    }
+    .header-logo .hl-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem; font-weight: 800;
+      color: var(--green-d);
+      letter-spacing: -0.01em;
+    }
+    .header-right {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      text-align: right;
+    }
+    .header-right small {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--green);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* Page content z-index */
+    .page-content { position: relative; z-index: 2; }
+
+    /* Section Title Bar (replaces colored headers in original) */
+    .title-bar {
+      background: linear-gradient(135deg, var(--green), var(--green-d));
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding: 0.9rem 1.5rem;
+      border-radius: 30px;
+      text-align: center;
+      margin: 1.5rem 0 2rem;
+      box-shadow: 0 4px 12px rgba(26,82,50,0.2);
+    }
+    .title-bar .code {
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    /* Section labels (Product Features, applied range, etc.) */
+    .sect-label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: var(--green);
+      font-size: 1.05rem;
+      margin: 1.2rem 0 0.5rem;
+      letter-spacing: -0.005em;
+    }
+
+    /* Product layout (left text, right image) */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: start;
+      margin-bottom: 1.2rem;
+    }
+    .product-image {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      height: 220px;
+      overflow: hidden;
+      background: var(--green-soft);
+    }
+    .product-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .feature-text { font-size: 0.95rem; color: var(--text); line-height: 1.6; }
+    .applied-text { font-size: 0.95rem; color: var(--text); line-height: 1.6; }
+
+    /* Parameters & packing */
+    .param-block {
+      background: var(--green-soft);
+      border-left: 4px solid var(--green);
+      padding: 0.9rem 1.2rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 0.8rem;
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    .param-block strong { color: var(--green-d); }
+
+    /* Usage list */
+    .usage-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .usage-list li {
+      padding: 0.4rem 0 0.4rem 1.4rem;
+      position: relative;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: var(--text);
+    }
+    .usage-list li::before {
+      content: '●';
+      color: var(--green);
+      position: absolute;
+      left: 0;
+      font-size: 0.7rem;
+      top: 0.65rem;
+    }
+
+    /* Footer */
+    .page-footer {
+      position: absolute;
+      bottom: 12mm; left: 18mm; right: 18mm;
+      padding-top: 0.7rem;
+      border-top: 1px dashed var(--border);
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      text-align: center;
+      z-index: 2;
+    }
+    .page-footer strong { color: var(--green-d); }
+
+    /* COVER PAGE */
+    .cover {
+      padding: 0;
+      background: linear-gradient(135deg, #ffffff 0%, var(--green-soft) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .cover-curve-r {
+      position: absolute;
+      top: 0; right: -120px;
+      width: 400px; height: 100%;
+      border-left: 3px solid var(--green);
+      border-radius: 50% 0 0 50%;
+      opacity: 0.4;
+    }
+    .cover-curve-l {
+      position: absolute;
+      top: -60px; left: -160px;
+      width: 350px; height: 100%;
+      border-right: 3px solid var(--green-l);
+      border-radius: 0 50% 50% 0;
+      opacity: 0.3;
+    }
+    .cover-logo {
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .cover-logo img {
+      height: 130px; width: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #ffffff;
+      box-shadow: 0 8px 32px rgba(26,82,50,0.2);
+    }
+    .cover-company {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--green-d);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+      position: relative; z-index: 2;
+    }
+    .cover-tagline {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      color: var(--green);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 4rem;
+      position: relative; z-index: 2;
+    }
+    .cover-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      color: var(--text-soft);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      position: relative; z-index: 2;
+    }
+    .cover-manual {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3.4rem;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: -0.02em;
+      position: relative; z-index: 2;
+    }
+    .cover-company-bottom {
+      position: absolute;
+      bottom: 60px; left: 0; right: 0;
+      text-align: center;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      z-index: 2;
+    }
+
+    /* COMPANY PROFILE PAGE */
+    .profile-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--green-d);
+      text-align: center;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--green-soft);
+      margin-bottom: 1.5rem;
+    }
+    .profile-company {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+    .profile-text {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .profile-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .cert-block {
+      background: var(--green-soft);
+      border-radius: 6px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+    .cert-block h5 {
+      font-family: 'Poppins', sans-serif;
+      color: var(--green-d);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .cert-block p {
+      color: var(--text-soft);
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+    .badge-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+    .badge-card {
+      background: #ffffff;
+      border: 2px solid var(--green-l);
+      border-radius: 8px;
+      padding: 0.8rem 0.5rem;
+      text-align: center;
+    }
+    .badge-card .b-icon {
+      font-size: 1.6rem;
+      color: var(--green);
+      margin-bottom: 0.3rem;
+    }
+    .badge-card .b-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--green-d);
+      line-height: 1.3;
+    }
+    .badge-card .b-desc {
+      font-size: 0.68rem;
+      color: var(--text-soft);
+      margin-top: 0.2rem;
+    }
+
+    /* Application page grid */
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .app-tile {
+      background: var(--green-soft);
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .app-tile .at-img {
+      height: 170px;
+      overflow: hidden;
+    }
+    .app-tile .at-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .app-tile .at-label {
+      padding: 0.7rem 0.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: var(--green-d);
+      font-size: 0.9rem;
+    }
+
+    /* BACK COVER */
+    .back-cover {
+      padding: 0;
+      background: linear-gradient(180deg, #ffffff 0%, var(--green-soft) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .bc-year {
+      position: absolute;
+      top: 40px; left: 30px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--green);
+      letter-spacing: 0.15em;
+      z-index: 3;
+    }
+    .bc-year small { display:block; font-size: 0.65rem; color: var(--text-soft); margin-top: 6px; }
+    .bc-curve {
+      position: absolute;
+      top: 20px; right: -100px;
+      width: 450px; height: 450px;
+      border-left: 3px solid var(--green);
+      border-radius: 50%;
+      opacity: 0.5;
+      z-index: 1;
+    }
+    .bc-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
+      color: var(--green-d);
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-top: 50%;
+      z-index: 2;
+      position: relative;
+    }
+    .bc-bottom {
+      text-align: center;
+      padding: 0 30px 60px;
+      z-index: 2;
+      position: relative;
+    }
+    .bc-company {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--green-d);
+      margin-bottom: 0.5rem;
+    }
+    .bc-addr {
+      color: var(--text-soft);
+      font-size: 0.85rem;
+      line-height: 1.7;
+    }
+
+    /* Print rules */
+    @media print {
+      html, body { background: #ffffff; }
+      .page {
+        margin: 0;
+        page-break-after: always;
+        box-shadow: none;
+        border: none;
+      }
+      .page:last-child { page-break-after: auto; }
+      @page { size: A4; margin: 0; }
+    }
+
+    .print-bar {
+      position: fixed;
+      top: 1rem; right: 1rem;
+      background: var(--green);
+      color: #ffffff;
+      padding: 0.8rem 1.4rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border: none;
+      z-index: 1000;
+    }
+    @media print { .print-bar { display: none; } }
+  </style>
+</head>
+<body>
+
+<button class="print-bar" onclick="window.print()">🖨 Print / Save as PDF</button>
+
+<!-- ─────── COVER ─────── -->
+<div class="page cover">
+  <div class="cover-curve-r"></div>
+  <div class="cover-curve-l"></div>
+  <div class="cover-logo">
+    <img src="./logo.jpg" alt="Limestone" />
+  </div>
+  <div class="cover-company">Limestone Company</div>
+  <div class="cover-tagline">Build on Trust · Industrial Excellence</div>
+  <div class="cover-title">Concrete Additive</div>
+  <div class="cover-manual">Product Manual</div>
+  <div class="cover-company-bottom">2026 Edition</div>
+</div>
+
+<!-- ─────── PAGE 2 — COMPANY PROFILE ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">
+      Pioneer in Concrete Additives
+      <small>Build on Trust</small>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <h1 class="profile-title">Company Profile Introduction</h1>
+    <div class="profile-company">Limestone Company</div>
+
+    <div class="profile-layout">
+      <div>
+        <p class="profile-text">Limestone Company specialises in Polycarboxylate Superplasticizer and a comprehensive range of construction chemicals. We are a professional concrete additive supplier &amp; exporter committed to research, development, sourcing, sales and service of premium concrete additives. Our main offerings include various concrete admixtures, mortar admixtures and speciality mortars.</p>
+      </div>
+      <div>
+        <div class="cert-block">
+          <h5>ISO 9001</h5>
+          <p>International Quality Management System Certification</p>
+        </div>
+        <div class="cert-block">
+          <h5>ISO 14001</h5>
+          <p>Environmental Management System Certification</p>
+        </div>
+        <div class="cert-block">
+          <h5>GB/T 28001</h5>
+          <p>Occupational Health &amp; Safety Management Certification</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="badge-row">
+      <div class="badge-card">
+        <div class="b-icon">📜</div>
+        <div class="b-title">National &amp; Industry Standards</div>
+        <div class="b-desc">Multiple Publications</div>
+      </div>
+      <div class="badge-card">
+        <div class="b-icon">🏆</div>
+        <div class="b-title">Premium Supply Network</div>
+        <div class="b-desc">Quality Assured</div>
+      </div>
+      <div class="badge-card">
+        <div class="b-icon">🌟</div>
+        <div class="b-title">Specialised &amp; Innovative</div>
+        <div class="b-desc">Export Excellence</div>
+      </div>
+    </div>
+
+    <p class="profile-text">Limestone has grown with the rapid development of India's and the global infrastructure boom. We are both a witness and a participant of large-scale construction transformation. Through long-term practice, our technical team has accumulated rich experience, continuously upgraded our product range and shaped excellent quality benchmarks.</p>
+
+    <p class="profile-text">We maintain a complete quality control system spanning admixture testing, concrete laboratory, mortar laboratory and quality inspection — with quality control through every step of product design, supply, inspection and end-use application.</p>
+
+    <p class="profile-text">Our products have been used in major national infrastructure projects: nuclear power plants, high-speed railway stations, metro systems, port container terminals, expressways, viaduct projects, bridges, and dozens of other large infrastructure works. Products are exported to the Middle East, Africa, South-East Asia, Europe and beyond.</p>
+
+    <div style="margin-top:1.2rem; border-radius:8px; overflow:hidden; border:1px solid var(--border)">
+      <img src="./cat-img/factory.jpg" alt="Limestone Company manufacturing complex" style="width:100%; height:200px; object-fit:cover; display:block" />
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <strong>Limestone Company</strong> · Industrial Area, India · sales@limestonecompany.in · +91 81146 87783
+  </div>
+</div>
+
+<!-- ─────── PAGE 3 — KYD-A ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Water-Reducing <span class="code">KYD-A</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">It demonstrates excellent water reduction ratio and superior dispersion performance, making it ideal for applications requiring high flowability.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">Applications include concrete, grouting material, self-leveling compound, waterproof mortar, repair mortar, and high-ductility concrete.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-a.jpg" alt="KYD-A Powder Superplasticizer" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content. Optimal proportion determined through testing based on raw materials and engineering requirements.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 4 — KYD-L ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Water-Reducing <span class="code">KYD-L</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">The hexahydrate superplastic powder exhibits high water reduction efficiency while demonstrating excellent material compatibility.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">Applications include concrete, grouting material, self-leveling compound, waterproof mortar, repair mortar, and high-ductility concrete.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-l.jpg" alt="KYD-L Hexahydrate Powder" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content. Optimal proportion determined through testing.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 5 — KYD-B ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Water-Reducing &amp; Slump-Retaining Type <span class="code">KYD-B</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">It exhibits a high water-reducing ratio and certain fluidity retention capability. In some flooring materials, it can be used as a standalone water-reducing component.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">Applications include concrete, grouting material, self-leveling compound, waterproof mortar, and road repair.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-b.jpg" alt="KYD-B Slump Retention Plasticizer" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 6 — KYD-F ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Water-Reducing &amp; Slump-Retaining Type <span class="code">KYD-F</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">It exhibits excellent material adaptability, combining high water reduction ratio with outstanding slump retention performance. While ensuring early-stage concrete fluidity, it effectively controls slump loss caused by cement hydration or aggregate adsorption. Compared to KYD-B, it demonstrates superior slump retention performance.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">Commercial concrete mixing plants, cast-in-place frame structures, and pumped concrete pouring applications.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-f.jpg" alt="KYD-F Premium Slump-Retention Plasticizer" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 7 — KYD-D ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Collapsibility-Preserving <span class="code">KYD-D</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">The significant steric hindrance effect enables slow and continuous release of water-reducing groups, maintaining sustained cement dispersion with exceptional slump retention and flow loss inhibition capabilities.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">For concrete applications involving high-temperature environments or requiring prolonged fluidity maintenance. Recommended for use in combination with water-reducing powder.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-d.jpg" alt="KYD-D Sustained-Release Plasticizer" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 8 — KYD-K ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Collapsibility-Preserving <span class="code">KYD-K</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">A hexahedral sustained-release water reducer that continuously releases water-reducing groups at a slow rate to maintain cement dispersion and flowability. Exhibits strong anti-adsorption capability and excellent encapsulation properties. Recommended for combined use with water-reducing products.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">For concrete applications involving high-temperature environments or requiring prolonged fluidity maintenance. Recommended for combination use with water-reducing powder.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-k.jpg" alt="KYD-K Encapsulated Sustained-Release" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 9 — KYD-S ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Water-Retaining <span class="code">KYD-S</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">It exhibits excellent water retention capacity and stable dispersion properties. Its molecular structure effectively regulates water distribution within concrete, preventing bleeding and segregation phenomena, thereby enhancing the overall workability and construction comfort of concrete.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">Concrete applications under complex working conditions such as suboptimal aggregate gradation, challenging water control, and elevated ambient temperatures. Use with water-reducing powder.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-s.jpg" alt="KYD-S Water-Retention Plasticizer" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 10 — KYD-E ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Early-Strength <span class="code">KYD-E</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">Shortens the initial setting time and final setting time, enhancing early strength without affecting late strength.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">Various prefabricated components and modular buildings.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-e.jpg" alt="KYD-E Early-Strength Accelerator" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 11 — KYD-P ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Series KYD</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Gypsum Type <span class="code">KYD-P</span></div>
+
+    <div class="product-grid">
+      <div>
+        <div class="sect-label">Product Features</div>
+        <p class="feature-text">It exhibits excellent plasticizing and water-reducing effects on gypsum such as desulfurization gypsum and phosphogypsum, imparting superior fluidity to the mixture. Available in two variants: room-temperature and high-temperature resistant.</p>
+        <div class="sect-label">Applied Range</div>
+        <p class="applied-text">Gypsum self-flowing plaster, various types of gypsum mortar, and gypsum prefabricated components.</p>
+      </div>
+      <div class="product-image">
+        <img src="./cat-img/powder-p.jpg" alt="KYD-P Gypsum Plasticizer" />
+      </div>
+    </div>
+
+    <div class="sect-label">Product Parameter</div>
+    <div class="param-block">
+      <strong>Appearance:</strong> White to pale yellow powder · <strong>Bulk density:</strong> 400–700 kg/m³ · <strong>Moisture content:</strong> ≤5% · <strong>pH (20% liquid):</strong> 4–6 · <strong>Concrete water reduction rate:</strong> ≥25%
+    </div>
+
+    <div class="sect-label">Packing Specifications</div>
+    <div class="param-block">25 kg/bag · 40 bags/ton bag · 750 kg/ton bag (bulk)</div>
+
+    <div class="sect-label">Usage and Dosage</div>
+    <ul class="usage-list">
+      <li>In ready-mix applications, the materials are added according to the mix ratio and thoroughly mixed.</li>
+      <li>When liquefying, prepare clean water, activate the stirring device, and slowly add the substance to the water at a uniform rate, stirring until complete dissolution.</li>
+      <li>Recommended dosage range: 0.20–0.45% of the cementitious material content.</li>
+      <li>When raw materials are changed, conduct new suitability tests and determine the dosage.</li>
+      <li>Do not use in combination with naphthalene-based, melamine-based, or aminosulfonate superplasticizers.</li>
+    </ul>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · sales@limestonecompany.in · +91 81146 87783</div>
+</div>
+
+<!-- ─────── PAGE 12 — PRODUCT APPLICATION ─────── -->
+<div class="page">
+  <div class="curve-tl"></div>
+  <div class="curve-br"></div>
+  <div class="page-header">
+    <div class="header-logo">
+      <img src="./logo.jpg" alt="Limestone" />
+      <div class="hl-name">Limestone Company</div>
+    </div>
+    <div class="header-right">Powder Polycarboxylic Acid Superplasticizer<small>Build on Trust</small></div>
+  </div>
+
+  <div class="page-content">
+    <div class="title-bar">Product Application</div>
+    <p style="text-align:center; color:var(--text-soft); font-size:0.95rem; margin-bottom:1.2rem">
+      Our concrete additives have been deployed in iconic infrastructure and landmark projects across the globe.
+    </p>
+    <div class="app-grid">
+      <div class="app-tile"><div class="at-img"><img src="./cat-img/lm-shanghai.jpg" alt="Shanghai Tower" /></div><div class="at-label">China: Shanghai Tower</div></div>
+      <div class="app-tile"><div class="at-img"><img src="./cat-img/lm-goldengate.jpg" alt="Golden Gate Bridge" /></div><div class="at-label">United States: Golden Gate Bridge</div></div>
+      <div class="app-tile"><div class="at-img"><img src="./cat-img/lm-skytree.jpg" alt="Tokyo Skytree" /></div><div class="at-label">Japan: Tokyo Skytree</div></div>
+      <div class="app-tile"><div class="at-img"><img src="./cat-img/lm-eiffel.jpg" alt="Eiffel Tower" /></div><div class="at-label">France: Eiffel Tower</div></div>
+      <div class="app-tile"><div class="at-img"><img src="./cat-img/lm-colosseum.jpg" alt="Colosseum" /></div><div class="at-label">Italy: Colosseum</div></div>
+      <div class="app-tile"><div class="at-img"><img src="./cat-img/lm-sydney.jpg" alt="Sydney Opera House" /></div><div class="at-label">Australia: Sydney Opera House</div></div>
+    </div>
+  </div>
+
+  <div class="page-footer"><strong>Limestone Company</strong> · Industrial Area, India · sales@limestonecompany.in</div>
+</div>
+
+<!-- ─────── BACK COVER ─────── -->
+<div class="page back-cover">
+  <div class="bc-year">2026<small>Edition</small></div>
+  <div class="bc-curve"></div>
+  <div class="bc-title">BUILDING THE WORLD</div>
+  <div class="bc-bottom">
+    <div class="bc-company">Limestone Company</div>
+    <div class="bc-addr">
+      Industrial Area, India<br>
+      sales@limestonecompany.in · +91 81146 87783<br>
+      www.limestonecorp.com
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

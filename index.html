@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limestone Company — Industrial Supplier &amp; Exporter</title>
+  <meta name="description" content="Limestone Company — global supplier of Aluminium, Polymers and Industrial Chemicals. Trusted by manufacturers and traders across 25+ countries." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-contact">
+        <a href="mailto:sales@limestonecompany.in"><span>✉</span> sales@limestonecompany.in</a>
+        <a href="tel:+918114687783"><span>📞</span> +91 81146 87783</a>
+      </div>
+      <div class="topbar-social">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Facebook">f</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <img src="./logo.jpg" alt="Limestone Company" class="logo-img" />
+        <span class="logo-text">
+          <span class="logo-name">Limestone <span class="logo-co">Company</span></span>
+          <span class="logo-tag">Build on Trust</span>
+        </span>
+      </a>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <div class="nav-dropdown">
+          <a href="#products" class="nav-dd-trigger">Products <span class="dd-caret">▾</span></a>
+          <div class="mega-menu">
+            <div class="mega-col">
+              <h6>Aluminum Division</h6>
+              <ul>
+                <li><a href="#aluminum">Aluminum Billets</a></li>
+                <li><a href="#aluminum">Aluminum Ingots</a></li>
+                <li><a href="#aluminum">Solar Panel Extrusion Frames</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h6>Polymer Division</h6>
+              <ul>
+                <li><a href="#polymers">PVC Resin</a></li>
+                <li><a href="#polymers">Calcium Carbonate</a></li>
+                <li><a href="#polymers">Titanium Dioxide</a></li>
+                <li><a href="#polymers">PE Wax</a></li>
+                <li><a href="#polymers">Ca-Zn Stabilizer</a></li>
+                <li><a href="#polymers">Impact Modifier</a></li>
+                <li><a href="#polymers">Calcium Stearate</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h6>Industrial Chemicals</h6>
+              <ul>
+                <li><a href="#chemicals">PCE Admixtures</a></li>
+                <li><a href="#chemicals">Silica Fume</a></li>
+                <li><a href="#chemicals">Calcium Nitrate</a></li>
+                <li><a href="#chemicals">Sodium Gluconate</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <a href="#industries">Industries</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="./catalogue.html" target="_blank" class="btn-quote btn-cat">📄 Aluminium</a>
+      <a href="./catalogue-chemicals.html" target="_blank" class="btn-quote btn-cat">📄 Chemicals</a>
+      <a href="#contact" class="btn-quote">Get a Quote</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mob-overlay" id="mobOverlay"></div>
+  <div class="mob-nav" id="mobNav">
+    <button class="mob-close" id="mobClose">✕</button>
+    <a href="#home" class="mob-link">Home</a>
+    <a href="#about" class="mob-link">About Us</a>
+    <div class="mob-group">
+      <div class="mob-group-title">Products</div>
+      <a href="#aluminum" class="mob-sublink">Aluminum Billets &amp; Ingots</a>
+      <a href="#aluminum" class="mob-sublink">Solar Panel Frames</a>
+      <a href="#polymers" class="mob-sublink">PVC Resin</a>
+      <a href="#polymers" class="mob-sublink">Calcium Carbonate</a>
+      <a href="#polymers" class="mob-sublink">Titanium Dioxide</a>
+      <a href="#polymers" class="mob-sublink">PE Wax</a>
+      <a href="#polymers" class="mob-sublink">Ca-Zn Stabilizer</a>
+      <a href="#polymers" class="mob-sublink">Impact Modifier</a>
+      <a href="#polymers" class="mob-sublink">Calcium Stearate</a>
+      <a href="#chemicals" class="mob-sublink">PCE Admixtures</a>
+      <a href="#chemicals" class="mob-sublink">Silica Fume</a>
+      <a href="#chemicals" class="mob-sublink">Calcium Nitrate</a>
+      <a href="#chemicals" class="mob-sublink">Sodium Gluconate</a>
+    </div>
+    <a href="#industries" class="mob-link">Industries</a>
+    <a href="#certifications" class="mob-link">Certifications</a>
+    <a href="#contact" class="mob-link">Contact</a>
+    <a href="#contact" class="mob-link mob-cta">Get a Quote →</a>
+  </div>
+
+  <!-- HERO CAROUSEL -->
+  <section class="hero" id="home">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1800&q=85&auto=format&fit=crop')">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div class="hero-eyebrow">Built on Decades of Industry Experience</div>
+          <h1 class="hero-title">Leading <span>Export House</span> for Industrial Supply</h1>
+          <p class="hero-sub">Serving manufacturers, extruders, polymer processors and construction chemical formulators worldwide.</p>
+          <div class="hero-btns">
+            <a href="#industries" class="btn-primary">Industries We Serve</a>
+            <a href="#contact" class="btn-outline">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('./pvc regin.png'); background-size:cover; background-position:center;">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div class="hero-eyebrow">Polymer Division</div>
+          <h1 class="hero-title">Premium <span>PVC Resin</span> Supplier</h1>
+          <p class="hero-sub">Suspension and emulsion grade PVC resin for pipes, profiles, films, cables and flexible applications.</p>
+          <div class="hero-btns">
+            <a href="#polymers" class="btn-primary">View Polymer Products</a>
+            <a href="#contact" class="btn-outline">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('./hero3.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+          <div class="hero-eyebrow">Aluminium Extrusion Specialists</div>
+          <h1 class="hero-title">Precision <span>Aluminium Supply</span> for Industry</h1>
+          <p class="hero-sub">Billets, ingots and extrusion profiles — supplied from certified smelters to manufacturers worldwide.</p>
+          <div class="hero-btns">
+            <a href="#aluminum" class="btn-primary">View Aluminium Products</a>
+            <a href="#contact" class="btn-outline">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous">‹</button>
+    <button class="hero-arrow hero-next" id="heroNext" aria-label="Next">›</button>
+    <div class="hero-dots" id="heroDots"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="kicker">About Limestone Company</p>
+          <h2 class="h2">India-Based <span class="accent">Aluminium, Polymer &amp; Chemical</span> Importer &amp; Supplier</h2>
+          <p class="p">We are an India-based aluminium extrusion trading and sourcing company engaged in supplying high-quality aluminium profiles, tubes, and industrial sections for construction, solar, and engineering applications.</p>
+          <p class="p">We work closely with reputed aluminium extrusion manufacturers across India to source products as per customer requirements, drawings, and technical specifications. Our focus is on delivering reliable quality, competitive pricing, and timely supply for both domestic and export markets.</p>
+          <p class="p">We are also one of India's leading importers and suppliers of <strong>PVC Resin</strong> — catering to pipe manufacturers, cable compounders, profile extruders and flexible film producers across the country. Our PVC resin portfolio covers suspension and emulsion grades sourced from certified global manufacturers.</p>
+          <p class="p">In the <strong>Polyolefin</strong> segment, we supply Polypropylene (PP) and Polyethylene (PE) grades for packaging, injection moulding, pipe extrusion and film applications — backed by consistent quality and competitive pricing.</p>
+          <p class="p">Our <strong>Industrial Chemicals</strong> division covers a comprehensive range including PCE Admixtures, Silica Fume, Calcium Nitrate, Sodium Gluconate and specialty additives — serving construction chemical formulators, RMC plants and industrial processors.</p>
+          <p class="p">Our strength lies in efficient sourcing, a strong global and domestic supplier network, and customer-focused service that ensures the right product reaches the right place on time.</p>
+          <a href="#products" class="btn-primary">Explore Products →</a>
+        </div>
+        <div class="about-stats">
+
+          <div class="stat"><div class="stat-num" data-target="3" data-suffix="">0</div><div class="stat-lbl">Core Divisions</div></div>
+          <div class="stat"><div class="stat-num" data-target="100" data-suffix="%">0%</div><div class="stat-lbl">Quality Tested</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Our Products</p>
+        <h2 class="h2">Comprehensive <span class="accent">Product Range</span></h2>
+        <p class="lead">Premium Aluminium products, Polymers and Industrial Chemicals — sourced from certified manufacturers and supplied worldwide.</p>
+        <div style="margin-top:1rem;display:flex;gap:0.8rem;flex-wrap:wrap;justify-content:center">
+          <a href="./catalogue.html" target="_blank" class="btn-primary">📄 Aluminium Profile Catalogue →</a>
+          <a href="./catalogue-chemicals.html" target="_blank" class="btn-primary">📄 Concrete Additive Manual →</a>
+        </div>
+      </div>
+
+      <div class="prod-grid">
+        <a href="#aluminum" class="prod-tile">
+          <div class="prod-img" style="background-image:url('./billets-2018.jpg')"></div>
+          <div class="prod-body">
+            <h3>Aluminum Billets</h3>
+            <p>6061, 6063, 6082 alloys for extrusion, forging and rolling.</p>
+            <span class="prod-arrow">View →</span>
+          </div>
+        </a>
+        <a href="#aluminum" class="prod-tile">
+          <div class="prod-img" style="background-image:url('./ingot.jpg')"></div>
+          <div class="prod-body">
+            <h3>Aluminum Ingots</h3>
+            <p>Primary &amp; secondary ingots for foundries and die-casting.</p>
+            <span class="prod-arrow">View →</span>
+          </div>
+        </a>
+        <a href="#aluminum" class="prod-tile">
+          <div class="prod-img" style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80&auto=format&fit=crop')"></div>
+          <div class="prod-body">
+            <h3>Solar Panel Extrusion Frames</h3>
+            <p>Anodised aluminum profiles for PV module manufacturers.</p>
+            <span class="prod-arrow">View →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRADING SECTION -->
+  <section class="trading-section" id="aluminum">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Trading &amp; Logistics</p>
+        <h2 class="h2">Aluminium <span class="accent">Ingots &amp; Billets</span> Trading</h2>
+      </div>
+
+      <div class="trading-layout">
+
+        <div class="trading-img-col">
+          <div class="trading-img-main">
+            <img src="./trading.jpg" alt="Aluminium Ingots and Billets" />
+          </div>
+          <div class="trading-img-grid">
+            <img src="./ingot.jpg" alt="Aluminium Ingots" />
+            <img src="./billets-2018.jpg" alt="Aluminium Billets 2018" />
+          </div>
+        </div>
+
+        <div class="trading-content">
+          <h3>Ingots &amp; Billets</h3>
+          <p>Limestone Company, apart from its supply operations, has diversified into trading and logistics for primary aluminium products — serving manufacturers, extruders and traders across India and internationally.</p>
+          <p>We believe in making trade work by focusing on providing services to clients on time, efficiently and responsibly. Our streamlined logistics network ensures prompt delivery to your facility, regardless of order volume.</p>
+          <p>We operate as a reliable supplier of Aluminium Ingots and Billets, sourced from certified primary smelters and rolling mills, ensuring consistent quality and grade conformity with every shipment.</p>
+
+          <div class="trading-highlights">
+            <div class="th-item">
+              <div class="th-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              </div>
+              <div>
+                <strong>Certified Quality</strong>
+                <span>MTC &amp; COA with every lot</span>
+              </div>
+            </div>
+            <div class="th-item">
+              <div class="th-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <strong>Pan India Supply</strong>
+                <span>North, South, East &amp; West India</span>
+              </div>
+            </div>
+            <div class="th-item">
+              <div class="th-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <div>
+                <strong>On-Time Delivery</strong>
+                <span>Reliable logistics &amp; dispatch</span>
+              </div>
+            </div>
+            <div class="th-item">
+              <div class="th-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+              </div>
+              <div>
+                <strong>B2B &amp; Export</strong>
+                <span>25+ countries served</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="trading-grades">
+            <h4>Available Grades</h4>
+            <div class="grade-tags">
+              <span>6061</span><span>6063</span><span>6082</span>
+              <span>ADC-12</span><span>LM-6</span><span>LM-24</span>
+              <span>99.7% Pure</span><span>EC Grade</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">Enquire Now →</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POLYMERS SECTION -->
+  <section class="polymers-section" id="polymers">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Polymer Division</p>
+        <h2 class="h2">Premium <span class="accent">Polymer Products</span></h2>
+        <p class="lead">A complete range of polymer raw materials and additives — sourced from certified manufacturers and supplied to processors across India.</p>
+      </div>
+
+      <div class="poly-grid">
+
+        <div class="poly-card">
+          <div class="poly-card-img" style="background-image:url('./pvc regin.png')"></div>
+          <h4>PVC Resin</h4>
+          <p>Suspension and emulsion grade PVC resin — K-65, K-67, K-70 for pipes, profiles, cables and flexible films.</p>
+          <a href="#contact" class="poly-link">Enquire →</a>
+        </div>
+
+        <div class="poly-card">
+          <div class="poly-card-img" style="background-image:url('./Calcium-Carbonate.jpg')"></div>
+          <h4>Calcium Carbonate</h4>
+          <p>Coated and uncoated grades for PVC compounding, masterbatch, paints and rubber applications.</p>
+          <a href="#contact" class="poly-link">Enquire →</a>
+        </div>
+
+        <div class="poly-card">
+          <div class="poly-card-img" style="background-image:url('./Industrial-Titanium-Dioxide.jpg')"></div>
+          <h4>Titanium Dioxide</h4>
+          <p>Rutile and anatase TiO₂ for PVC, paints, coatings, plastics and masterbatch — high opacity and whiteness.</p>
+          <a href="#contact" class="poly-link">Enquire →</a>
+        </div>
+
+        <div class="poly-card">
+          <div class="poly-card-img" style="background-image:url('./PE-Wax-Flakes.jpg')"></div>
+          <h4>PE Wax</h4>
+          <p>Polyethylene wax as internal and external lubricant in PVC processing — improves flow and surface finish.</p>
+          <a href="#contact" class="poly-link">Enquire →</a>
+        </div>
+
+        <div class="poly-card">
+          <div class="poly-card-img" style="background-image:url('./ca-zn-stabilizer.jpg')"></div>
+          <h4>Ca-Zn Stabilizer</h4>
+          <p>Calcium-Zinc heat stabilizer for rigid and flexible PVC — non-toxic, RoHS compliant, excellent initial colour.</p>
+          <a href="#contact" class="poly-link">Enquire →</a>
+        </div>
+
+        <div class="poly-card">
+          <div class="poly-card-img" style="background-image:url('./impact-modifier-for-plastics.jpg')"></div>
+          <h4>Impact Modifier</h4>
+          <p>CPE and ACR-based impact modifiers for rigid PVC pipes, fittings, profiles and window sections.</p>
+          <a href="#contact" class="poly-link">Enquire →</a>
+        </div>
+
+        <div class="poly-card">
+          <div class="poly-card-img" style="background-image:url('./Calcium Stearate.jpg')"></div>
+          <h4>Calcium Stearate</h4>
+          <p>Lubricant and stabilizer for PVC, polyolefins and rubber — improves processing, anti-blocking and release properties.</p>
+          <a href="#contact" class="poly-link">Enquire →</a>
+        </div>
+
+        <div class="poly-cta">
+          <h4>Need a Custom Mix or Bulk Order?</h4>
+          <p>Our team can advise on formulation compatibility and arrange sample lots before bulk supply.</p>
+          <a href="#contact" class="btn-primary">Contact Us →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEMICALS GRID -->
+  <section class="chemicals" id="chemicals">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Industrial Chemicals Division</p>
+        <h2 class="h2">Construction &amp; <span class="accent">Speciality Chemicals</span></h2>
+        <p class="lead">A complete range of admixtures, additives and raw chemicals — sourced from leading manufacturers and supplied worldwide.</p>
+      </div>
+
+      <div class="chem-grid">
+        <div class="chem-tile">
+          <div class="chem-img" style="background-image:url('./Concrete-Admixture-Superplasticizer-PCE.avif')"></div>
+          <h4>PCE Admixtures</h4>
+          <p>Polycarboxylate ether superplasticizers — multiple grades for every RMC application.</p>
+        </div>
+        <div class="chem-tile">
+          <div class="chem-img" style="background-image:url('./Silica Fume.jpg')"></div>
+          <h4>Silica Fume</h4>
+          <p>Ultra-fine pozzolanic powder of high-purity SiO₂ for high-performance concrete.</p>
+        </div>
+        <div class="chem-tile">
+          <div class="chem-img" style="background-image:url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=80&auto=format&fit=crop')"></div>
+          <h4>Calcium Nitrate</h4>
+          <p>Accelerator for cold weather concrete and corrosion inhibitor for embedded steel.</p>
+        </div>
+        <div class="chem-tile">
+          <div class="chem-img" style="background-image:url('https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=500&q=80&auto=format&fit=crop')"></div>
+          <h4>Sodium Gluconate</h4>
+          <p>Industrial grade retarder and chelating agent — 98% min purity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="industries" id="industries">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Industries We Serve</p>
+        <h2 class="h2">Trusted by <span class="accent">Multiple Sectors</span></h2>
+        <p class="lead">Supplying premium Aluminium, Polymers and Industrial Chemicals to world-class manufacturers across 7 key industries.</p>
+      </div>
+      <div class="ind-grid-new">
+
+        <a href="#aluminum" class="ind-tile">
+          <div class="ind-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="28" width="48" height="10" rx="2" fill="currentColor" opacity=".15"/><rect x="8" y="16" width="48" height="10" rx="2" fill="currentColor" opacity=".3"/><rect x="8" y="40" width="48" height="10" rx="2" fill="currentColor"/></svg>
+          </div>
+          <h4>Building &amp; Construction</h4>
+          <p>Aluminum profiles for doors, windows, curtain walls and architectural cladding.</p>
+          <span class="ind-arrow">→</span>
+        </a>
+
+        <a href="#aluminum" class="ind-tile">
+          <div class="ind-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32 8L8 48h48L32 8z" fill="currentColor" opacity=".15"/><path d="M32 14L12 46h40L32 14z" fill="currentColor" opacity=".3"/><rect x="20" y="46" width="24" height="6" rx="1" fill="currentColor"/><line x1="32" y1="8" x2="32" y2="4" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Renewable Energy</h4>
+          <p>Solar panel extrusion frames and wind mill profiles — anodised and powder-coated.</p>
+          <span class="ind-arrow">→</span>
+        </a>
+
+        <a href="#chemicals" class="ind-tile">
+          <div class="ind-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="16" fill="currentColor" opacity=".15"/><circle cx="32" cy="32" r="10" fill="currentColor" opacity=".3"/><circle cx="32" cy="32" r="5" fill="currentColor"/><path d="M32 8v8M32 48v8M8 32h8M48 32h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Electrical &amp; Electronics</h4>
+          <p>Heat sinks, LED profiles, IPS tubes, electrical busbars and lighting extrusions.</p>
+          <span class="ind-arrow">→</span>
+        </a>
+
+        <a href="#aluminum" class="ind-tile">
+          <div class="ind-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 44 L32 12 L54 44" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 44 L32 22 L46 44" fill="currentColor" opacity=".2"/><rect x="26" y="44" width="12" height="8" rx="1" fill="currentColor"/></svg>
+          </div>
+          <h4>Transmission &amp; Distribution</h4>
+          <p>High-conductivity aluminum bus bars, conductors and cable trays for power networks.</p>
+          <span class="ind-arrow">→</span>
+        </a>
+
+        <a href="#aluminum" class="ind-tile">
+          <div class="ind-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="30" width="52" height="14" rx="7" fill="currentColor" opacity=".15"/><circle cx="16" cy="46" r="8" fill="currentColor" opacity=".3"/><circle cx="48" cy="46" r="8" fill="currentColor" opacity=".3"/><circle cx="16" cy="46" r="4" fill="currentColor"/><circle cx="48" cy="46" r="4" fill="currentColor"/><path d="M24 37h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Automobile &amp; Aeronautics</h4>
+          <p>Precision aluminum billets and extrusions for automotive body parts and aerospace components.</p>
+          <span class="ind-arrow">→</span>
+        </a>
+
+        <a href="#aluminum" class="ind-tile">
+          <div class="ind-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="18" height="18" rx="2" fill="currentColor" opacity=".3"/><rect x="36" y="10" width="18" height="18" rx="2" fill="currentColor" opacity=".15"/><rect x="10" y="36" width="18" height="18" rx="2" fill="currentColor" opacity=".15"/><rect x="36" y="36" width="18" height="18" rx="2" fill="currentColor"/><path d="M28 19h8M19 28v8M45 28v8M36 45h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h4>Automation Industry</h4>
+          <p>Structural aluminum profiles, T-slot systems and machine frames for industrial automation.</p>
+          <span class="ind-arrow">→</span>
+        </a>
+
+        <a href="#aluminum" class="ind-tile">
+          <div class="ind-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="14" width="48" height="38" rx="3" fill="currentColor" opacity=".1"/><rect x="14" y="20" width="16" height="24" rx="2" fill="currentColor" opacity=".4"/><rect x="34" y="20" width="16" height="24" rx="2" fill="currentColor" opacity=".4"/><rect x="8" y="50" width="48" height="4" rx="2" fill="currentColor" opacity=".3"/><rect x="26" y="34" width="12" height="10" rx="1" fill="currentColor"/></svg>
+          </div>
+          <h4>Doors &amp; Windows</h4>
+          <p>Premium aluminum sliding doors, casement windows and modular partition systems.</p>
+          <span class="ind-arrow">→</span>
+        </a>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS / TRUST -->
+  <section class="certs" id="certifications">
+    <div class="container">
+      <div class="section-head">
+        <p class="kicker">Certifications &amp; Standards</p>
+        <h2 class="h2">Quality You Can <span class="accent">Verify</span></h2>
+        <p class="lead">Every shipment is independently tested and shipped with Mill Test Certificates (MTC), Material Test Reports (MTR), and Certificates of Analysis (COA).</p>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card"><div class="cert-icon">🏅</div><h4>ISO 9001:2015</h4><p>Quality Management Certified</p></div>
+        <div class="cert-card"><div class="cert-icon">📋</div><h4>ASTM Standards</h4><p>American Society for Testing</p></div>
+        <div class="cert-card"><div class="cert-icon">🌍</div><h4>EN Standards</h4><p>European Standards Compliant</p></div>
+        <div class="cert-card"><div class="cert-icon">🇮🇳</div><h4>IS Standards</h4><p>Bureau of Indian Standards</p></div>
+        <div class="cert-card"><div class="cert-icon">🔬</div><h4>SGS Tested</h4><p>Independent Lab Testing</p></div>
+        <div class="cert-card"><div class="cert-icon">🏭</div><h4>MSME Registered</h4><p>Government of India</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="kicker light">Get In Touch</p>
+          <h2 class="h2 light">Request a Quote or Sample</h2>
+          <p class="p light">Tell us about your requirement — material, grade, quantity and destination port. Our sales team will respond within 24 hours with pricing, lead time, and shipping options.</p>
+          <ul class="cinfo-list">
+            <li><span class="ci-icon">📞</span><div><strong>Call</strong><br>+91 81146 87783</div></li>
+            <li><span class="ci-icon">✉</span><div><strong>Email</strong><br>sales@limestonecompany.in</div></li>
+            <li><span class="ci-icon">📍</span><div><strong>Head Office</strong><br>Industrial Area, India</div></li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <h3>Enquiry Form</h3>
+          <div class="row">
+            <div class="fld"><label>Name *</label><input type="text" required /></div>
+            <div class="fld"><label>Company *</label><input type="text" required /></div>
+          </div>
+          <div class="row">
+            <div class="fld"><label>Phone *</label><input type="tel" required /></div>
+            <div class="fld"><label>Email</label><input type="email" /></div>
+          </div>
+          <div class="fld">
+            <label>Product Category</label>
+            <select>
+              <option value="">Select a category</option>
+              <optgroup label="Aluminum Division">
+                <option>Aluminum Billets</option>
+                <option>Aluminum Ingots</option>
+                <option>Solar Panel Extrusion Frames</option>
+              </optgroup>
+              <optgroup label="Polymer Division">
+                <option>PVC Resin</option>
+                <option>Calcium Carbonate</option>
+                <option>Titanium Dioxide</option>
+                <option>PE Wax</option>
+                <option>Ca-Zn Stabilizer</option>
+                <option>Impact Modifier</option>
+                <option>Calcium Stearate</option>
+              </optgroup>
+              <optgroup label="Industrial Chemicals">
+                <option>PCE Admixtures</option>
+                <option>Silica Fume</option>
+                <option>Calcium Nitrate</option>
+                <option>Sodium Gluconate</option>
+                <option>HPMC</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="fld"><label>Quantity / Destination</label><input type="text" placeholder="e.g. 50 MT to Jebel Ali, UAE" /></div>
+          <div class="fld"><label>Message</label><textarea rows="3" placeholder="Tell us more about your requirement…"></textarea></div>
+          <button type="submit" class="btn-primary full">Send Enquiry →</button>
+          <p class="form-note" id="formSuccess">✔ Thank you! We'll respond within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="./logo.jpg" alt="Limestone" />
+            <div>
+              <strong>Limestone</strong>
+              <span>Company</span>
+            </div>
+          </div>
+          <p>Global supplier of Aluminium, Polymers and Industrial Chemicals — engineered for industry, trusted worldwide.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">tw</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Aluminum</h5>
+          <ul>
+            <li><a href="#aluminum">Billets</a></li>
+            <li><a href="#aluminum">Ingots</a></li>
+            <li><a href="#aluminum">Solar Frames</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Polymers</h5>
+          <ul>
+            <li><a href="#polymers">PVC Resin</a></li>
+            <li><a href="#polymers">Calcium Carbonate</a></li>
+            <li><a href="#polymers">Titanium Dioxide</a></li>
+            <li><a href="#polymers">PE Wax</a></li>
+            <li><a href="#polymers">Ca-Zn Stabilizer</a></li>
+            <li><a href="#polymers">Impact Modifier</a></li>
+            <li><a href="#polymers">Calcium Stearate</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Chemicals</h5>
+          <ul>
+            <li><a href="#chemicals">PCE Admixtures</a></li>
+            <li><a href="#chemicals">Silica Fume</a></li>
+            <li><a href="#chemicals">HPMC / TiO₂</a></li>
+            <li><a href="#chemicals">PVC Resin</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="./catalogue.html" target="_blank">📄 Aluminium Catalogue</a></li>
+            <li><a href="./catalogue-chemicals.html" target="_blank">📄 Chemicals Manual</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Limestone Company. All rights reserved.</p>
+        <p>ISO 9001:2015 Certified · MSME Registered · GST Compliant</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Aluminum tabs
+    function showAl(id, btn) {
+      document.querySelectorAll('.al-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.al-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('al-' + id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    // Carousel
+    const slides = document.querySelectorAll('.hero-slide');
+    const dotsContainer = document.getElementById('heroDots');
+    let current = 0;
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'hero-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(d);
+    });
+    const dots = document.querySelectorAll('.hero-dot');
+    function goTo(i) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    document.getElementById('heroPrev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('heroNext').addEventListener('click', () => goTo(current + 1));
+    setInterval(() => goTo(current + 1), 6000);
+
+    // Mobile nav
+    const mo = document.getElementById('mobOverlay'), mn = document.getElementById('mobNav');
+    document.getElementById('hamburgerBtn').addEventListener('click', () => { mn.classList.add('open'); mo.classList.add('open'); });
+    document.getElementById('mobClose').addEventListener('click', () => { mn.classList.remove('open'); mo.classList.remove('open'); });
+    mo.addEventListener('click', () => { mn.classList.remove('open'); mo.classList.remove('open'); });
+    document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => { mn.classList.remove('open'); mo.classList.remove('open'); }));
+
+    // Sticky header shadow
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+    });
+
+    // Stat counter
+    const counters = document.querySelectorAll('.stat-num');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target, t = +el.dataset.target, s = el.dataset.suffix, dur = 1500, start = performance.now();
+          function step(now) {
+            const p = Math.min((now - start) / dur, 1);
+            el.textContent = Math.round(t * p) + s;
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+
+    // Smooth scroll for all anchor links (fixes mega menu interference)
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const hash = this.getAttribute('href');
+        if (!hash || hash === '#') return;
+        const target = document.querySelector(hash);
+        if (target) {
+          e.preventDefault();
+          const offset = 90;
+          // Small delay lets mega menu close + layout settle before scroll
+          setTimeout(() => {
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }, 50);
+          history.pushState(null, null, hash);
+        }
+      });
+    });
+
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('formSuccess').classList.add('show');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
