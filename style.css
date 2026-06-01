@@ -387,22 +387,120 @@ footer { background: var(--green-d); color: rgba(255,255,255,0.8); padding: 3.5r
 @media (max-width: 980px) {
   .main-nav { display: none; }
   .hamburger { display: flex; }
-  .about-grid { grid-template-columns: 1.4fr 1fr; gap: 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
+  .prod-grid { grid-template-columns: repeat(2, 1fr); }
+  .chem-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 600px) {
-  .topbar-contact { gap: 0.8rem; font-size: 0.75rem; }
-  .logo-text { display: none; }
-  .btn-quote { display: none; }
+
+@media (max-width: 768px) {
+  /* Header */
+  .logo-img { height: 52px; width: 52px; }
+  .logo-name { font-size: 1.1rem; }
+  .logo-tag { font-size: 0.62rem; }
+  .header-inner { padding: 0.4rem 1rem; gap: 1rem; }
+
+  /* Topbar */
+  .topbar-contact { gap: 0.6rem; font-size: 0.72rem; }
+  .topbar-social { display: none; }
+
+  /* Hero */
+  .hero { height: clamp(420px, 70vh, 600px); }
+  .hero-title { font-size: clamp(1.4rem, 6vw, 2.2rem); }
+  .hero-sub { font-size: 0.9rem; }
+  .hero-eyebrow { font-size: 0.68rem; }
+  .hero-btns { flex-direction: column; gap: 0.6rem; }
+  .hero-btns .btn-primary, .hero-btns .btn-outline { width: 100%; justify-content: center; text-align: center; }
   .hero-inner { padding: 0 1rem; }
-  .hero-arrow { width: 36px; height: 36px; font-size: 1.1rem; }
-  .hero-prev { left: 0.6rem; } .hero-next { right: 0.6rem; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .about-stats { grid-template-columns: 1fr 1fr; }
+  .hero-arrow { width: 34px; height: 34px; font-size: 1rem; }
+  .hero-prev { left: 0.5rem; }
+  .hero-next { right: 0.5rem; }
+
+  /* Sections padding */
+  .about, .products, .chemicals, .industries, .certs, .contact,
+  .trading-section, .polymers-section, .al-section { padding: 3rem 0; }
+
+  /* About */
+  .about-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  /* Products */
+  .prod-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .prod-img { height: 160px; }
+
+  /* Trading */
+  .trading-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .trading-img-main img { height: 220px; }
+  .trading-img-grid img { height: 160px; }
+  .trading-highlights { grid-template-columns: 1fr; gap: 0.75rem; }
+
+  /* Polymers */
+  .poly-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+  /* Chemicals */
+  .chem-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .chem-img { height: 120px; }
+
+  /* Industries */
+  .ind-grid-new { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+  /* Certs */
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Contact */
   .contact-form .row { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; }
+  .contact-form { padding: 1.5rem; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  /* Section headings */
+  .h2 { font-size: clamp(1.3rem, 5vw, 1.8rem); }
+  .lead { font-size: 0.92rem; }
+}
+
+@media (max-width: 480px) {
+  /* Logo */
+  .logo-img { height: 44px; width: 44px; }
+  .logo-name { font-size: 1rem; }
+  .logo-tag { display: none; }
+  .btn-quote { display: none; }
+
+  /* Hero */
+  .hero { height: clamp(380px, 65vh, 520px); }
+  .hero-dots { bottom: 0.8rem; }
+
+  /* Products */
+  .prod-grid { grid-template-columns: 1fr; }
+
+  /* Polymers */
+  .poly-grid { grid-template-columns: 1fr; }
+
+  /* Chemicals */
+  .chem-grid { grid-template-columns: 1fr; }
+
+  /* Industries */
+  .ind-grid-new { grid-template-columns: 1fr; }
+
+  /* Certs */
+  .cert-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Trading */
+  .trading-img-grid { grid-template-columns: 1fr 1fr; }
+  .trading-grades .grade-tags { gap: 0.4rem; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-col { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; }
+
+  /* Contact */
+  .cinfo-list { gap: 0.8rem; }
+
+  /* Section padding */
+  .container { padding: 0 1rem; }
+  .section-head { margin-bottom: 2rem; }
 }
 
 /* MEGA MENU DROPDOWN */
