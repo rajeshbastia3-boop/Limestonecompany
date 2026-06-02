@@ -528,19 +528,19 @@
             <li><span class="ci-icon">📍</span><div><strong>Head Office</strong><br>Industrial Area, India</div></li>
           </ul>
         </div>
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpqnvdee" method="POST">
           <h3>Enquiry Form</h3>
           <div class="row">
-            <div class="fld"><label>Name *</label><input type="text" required /></div>
-            <div class="fld"><label>Company *</label><input type="text" required /></div>
+            <div class="fld"><label>Name *</label><input type="text" name="name" required /></div>
+            <div class="fld"><label>Company *</label><input type="text" name="company" required /></div>
           </div>
           <div class="row">
-            <div class="fld"><label>Phone *</label><input type="tel" required /></div>
-            <div class="fld"><label>Email</label><input type="email" /></div>
+            <div class="fld"><label>Phone *</label><input type="tel" name="phone" required /></div>
+            <div class="fld"><label>Email</label><input type="email" name="email" /></div>
           </div>
           <div class="fld">
             <label>Product Category</label>
-            <select>
+            <select name="product">
               <option value="">Select a category</option>
               <optgroup label="Aluminum Division">
                 <option>Aluminum Billets</option>
@@ -565,8 +565,8 @@
               </optgroup>
             </select>
           </div>
-          <div class="fld"><label>Quantity / Destination</label><input type="text" placeholder="e.g. 50 MT to Jebel Ali, UAE" /></div>
-          <div class="fld"><label>Message</label><textarea rows="3" placeholder="Tell us more about your requirement…"></textarea></div>
+          <div class="fld"><label>Quantity / Destination</label><input type="text" name="quantity" placeholder="e.g. 50 MT to Jebel Ali, UAE" /></div>
+          <div class="fld"><label>Message</label><textarea rows="3" name="message" placeholder="Tell us more about your requirement…"></textarea></div>
           <button type="submit" class="btn-primary full">Send Enquiry →</button>
           <p class="form-note" id="formSuccess">✔ Thank you! We'll respond within 24 hours.</p>
         </form>
@@ -718,12 +718,7 @@
       });
     });
 
-    // Contact form
-    document.getElementById('contactForm').addEventListener('submit', e => {
-      e.preventDefault();
-      document.getElementById('formSuccess').classList.add('show');
-      e.target.reset();
-    });
+    // Contact form — handled by Formspree
   </script>
 </body>
 </html>
