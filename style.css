@@ -182,7 +182,7 @@ header.scrolled { box-shadow: var(--shadow-md); }
   0%   { transform: scale(1); }
   100% { transform: scale(1.08); }
 }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22,101,52,0.88) 0%, rgba(22,101,52,0.55) 60%, rgba(22,101,52,0.18) 100%); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.05) 100%); }
 .hero-inner { position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
 
 /* belyons-style slide-in-from-left text animation with staggered reveal */
