@@ -241,7 +241,9 @@
     </div>
     <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous">‹</button>
     <button class="hero-arrow hero-next" id="heroNext" aria-label="Next">›</button>
+    <div class="hero-counter" id="heroCounter"><span class="current">01</span><span class="sep">/</span><span class="total">03</span></div>
     <div class="hero-dots" id="heroDots"></div>
+    <div class="hero-progress" id="heroProgress"></div>
   </section>
 
   <!-- ABOUT -->
@@ -761,10 +763,16 @@
       btn.classList.add('active');
     }
 
-    // Carousel
+    // Carousel — belyons-style with progress bar + counter
     const slides = document.querySelectorAll('.hero-slide');
     const dotsContainer = document.getElementById('heroDots');
+    const progressBar = document.getElementById('heroProgress');
+    const counterCurrent = document.querySelector('#heroCounter .current');
+    const counterTotal = document.querySelector('#heroCounter .total');
+    const SLIDE_DURATION = 7000; // 7 seconds per slide
     let current = 0;
+    let progressStart = Date.now();
+
     slides.forEach((_, i) => {
       const d = document.createElement('button');
       d.className = 'hero-dot' + (i === 0 ? ' active' : '');
@@ -772,16 +780,33 @@
       dotsContainer.appendChild(d);
     });
     const dots = document.querySelectorAll('.hero-dot');
+    if (counterTotal) counterTotal.textContent = String(slides.length).padStart(2, '0');
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
     function goTo(i) {
       slides[current].classList.remove('active');
       dots[current].classList.remove('active');
       current = (i + slides.length) % slides.length;
       slides[current].classList.add('active');
       dots[current].classList.add('active');
+      if (counterCurrent) counterCurrent.textContent = pad(current + 1);
+      progressStart = Date.now();
+      if (progressBar) progressBar.style.width = '0%';
     }
+
     document.getElementById('heroPrev').addEventListener('click', () => goTo(current - 1));
     document.getElementById('heroNext').addEventListener('click', () => goTo(current + 1));
-    setInterval(() => goTo(current + 1), 6000);
+    setInterval(() => goTo(current + 1), SLIDE_DURATION);
+
+    // Progress bar animation loop
+    function updateProgress() {
+      const elapsed = Date.now() - progressStart;
+      const pct = Math.min(100, (elapsed / SLIDE_DURATION) * 100);
+      if (progressBar) progressBar.style.width = pct + '%';
+      requestAnimationFrame(updateProgress);
+    }
+    requestAnimationFrame(updateProgress);
 
     // Mobile nav
     const mo = document.getElementById('mobOverlay'), mn = document.getElementById('mobNav');
