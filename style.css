@@ -601,9 +601,10 @@ footer { background: var(--green-d); color: rgba(255,255,255,0.8); padding: 3.5r
   .mob-call-btn { display: none; }
   .btn-quote { display: none; }
 
-  /* Topbar — push phone number to the right corner, hide email */
-  .topbar-contact { margin-left: auto; gap: 0; }
-  .topbar-contact a:first-child { display: none; }
+  /* Topbar — email on left, phone on right (top corner above menu) */
+  .topbar-inner { flex-wrap: nowrap; }
+  .topbar-contact { flex: 1; justify-content: space-between; gap: 0.5rem; }
+  .topbar-contact a { font-size: 0.74rem; }
   .topbar-contact a:last-child { font-weight: 600; }
 
   .about-grid { grid-template-columns: 1fr; gap: 2rem; }
