@@ -246,8 +246,34 @@ header.scrolled { box-shadow: var(--shadow-md); }
   object-fit: contain;
   filter: drop-shadow(0 25px 50px rgba(0,0,0,0.45)) drop-shadow(0 8px 20px rgba(0,0,0,0.25));
 }
+/* Tablet — smaller package, still side-by-side */
 @media (max-width: 880px) {
-  .hero-product-image { display: none; }
+  .hero-product-image {
+    width: clamp(140px, 32vw, 220px);
+    right: 3%;
+    top: 50%;
+  }
+  .hero-product-image img {
+    max-height: 40vh;
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.45));
+  }
+  /* Constrain text so it doesn't overlap with the package */
+  .hero-slide .hero-inner { padding-right: clamp(150px, 36vw, 240px); }
+}
+/* Phone — package shrinks further, sits top-right */
+@media (max-width: 560px) {
+  .hero-product-image {
+    width: 110px;
+    right: 10px;
+    top: auto;
+    bottom: 70px;
+    transform: translateY(0) translateX(40px);
+  }
+  .hero-slide.active .hero-product-image {
+    transform: translateY(0) translateX(0);
+  }
+  .hero-product-image img { max-height: 200px; }
+  .hero-slide .hero-inner { padding-right: 125px; }
 }
 
 /* belyons-style SPLIT slide — image left, text right, light background */
