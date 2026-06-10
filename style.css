@@ -137,20 +137,27 @@ header.scrolled { box-shadow: var(--shadow-md); }
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--green-d); border-radius: 2px; }
 
-/* Mobile call button (visible only on mobile) */
+/* Mobile call button (visible only on mobile) — pill style with phone number */
 .mob-call-btn {
   display: none;
-  width: 42px; height: 42px;
   align-items: center; justify-content: center;
-  border-radius: 50%;
+  gap: 0.45rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
   background: var(--green);
   color: #ffffff;
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
   flex-shrink: 0;
+  font-family: var(--font-h);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
-.mob-call-btn:hover, .mob-call-btn:active { background: var(--green-d); transform: scale(1.05); }
-.mob-call-btn svg { display: block; }
+.mob-call-btn:hover, .mob-call-btn:active { background: var(--green-d); transform: scale(1.03); }
+.mob-call-btn svg { display: block; flex-shrink: 0; }
+.mob-call-num { display: inline-block; }
 
 /* MOBILE NAV */
 .mob-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 400; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
@@ -673,6 +680,15 @@ footer { background: var(--green-d); color: rgba(255,255,255,0.8); padding: 3.5r
   .logo-name { font-size: 1rem; }
   .logo-tag { display: none; }
   .btn-quote { display: none; }
+
+  /* Mobile call button — keep phone number visible, compact */
+  .mob-call-btn {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.78rem;
+    gap: 0.35rem;
+  }
+  .mob-call-btn svg { width: 16px; height: 16px; }
+  .header-inner { gap: 0.4rem; padding: 0.4rem 0.75rem; }
 
   /* Hero */
   .hero { height: clamp(380px, 65vh, 520px); }
